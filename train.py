@@ -28,7 +28,7 @@ from scipy.misc import imresize
 #	This will include doing some other function than taking the argmax of the last layer of the network
 #	This could just be a .50 threshold, may cause some instability in training with the mashing of all actions
 
-env = gym.make('Breakout-v0')
+env = gym.make('PongDeterministic-v3')
 env = wrappers.Monitor(env, 'recordings/breakout_experiment', force=True)
 # env.configure(remotes=1)  # automatically creates a local docker container
 
