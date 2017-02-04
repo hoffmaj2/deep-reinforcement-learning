@@ -5,7 +5,7 @@ import random
 class replayMemory():
 	def __init__(self):
 		# self.model_dir = model_dir
-		self.memory_size = 1000000
+		self.memory_size = 100000
 		self.actions = np.empty(self.memory_size, dtype = np.uint8)
 		self.rewards = np.empty(self.memory_size, dtype = np.integer)
 		self.screens = np.empty((self.memory_size, 84, 84), dtype = np.float16)

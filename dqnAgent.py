@@ -65,7 +65,7 @@ class DQNAgent():
 		self.history[:-1] = self.history[1:]
 		self.history[-1] = screen
 
-		self.cumulatedReward -= 1 + reward
+		self.cumulatedReward = reward + self.discount*self.cumulatedReward
 		self.memory.addMemory(screen, self.cumulatedReward, self.prevaction, done)
 		# Update from previous step
 		if training and self.actionCount > 35 and self.actionCount % self.trainFreq == 0:
