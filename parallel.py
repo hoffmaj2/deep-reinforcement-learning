@@ -1,7 +1,7 @@
 import multiprocessing
 from train import train
 #Change this to actual name
-from main import nameMethod
+# from main import nameMethod
 
 
 def worker(num,name):
